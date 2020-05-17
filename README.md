@@ -1,6 +1,6 @@
 # Unzpack
 
-> Persist ZIP content bytes into a file and extract it into a specific directory on file system.
+> A library to persist ZIP content bytes into a file and extract its content on file system.
 
 **Unzpack** is just a helper which persists ZIP bytes content on file system, then extract its content into a specific directory path and finally deletes current ZIP file.
 
@@ -16,8 +16,14 @@ unzpack = "0.1"
 ```rust
 use unzpack::Unzpack;
 
-fn main() -> std::io::Result<()> {
-    Unzpack::unpack(include_bytes!("../dist/public.zip"), "./assets.zip", "./dist")?;
+const BYTES: &[u8] = include_bytes!("data/assets.zip");
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    Unzpack::unpack(
+        BYTES,              // Zip bytes
+        "./out-file.zip",   // Output Zip file 
+        "./out-dir",        // Output extraction directory 
+    )?;
 
     Ok(())
 }

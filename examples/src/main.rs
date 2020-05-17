@@ -1,7 +1,9 @@
 use unzpack::Unzpack;
 
-fn main() -> std::io::Result<()> {
-    Unzpack::unpack(include_bytes!("../dist/public.zip"), "./assets.zip", "./dist")?;
+const BYTES: &[u8] = include_bytes!("../dist/public.zip");
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    Unzpack::unpack(BYTES, "./assets.zip", "./dist")?;
 
     Ok(())
 }
