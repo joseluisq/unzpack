@@ -16,7 +16,5 @@ include = [
     "LICENSE-APACHE"
 ]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 zip = "0.5"
