@@ -7,7 +7,7 @@ notifications:
 env:
   - PATH=$HOME/.cargo/bin:$PATH
 script:
-  - cargo test -j2 --all
+  - cargo test --lib
 matrix:
   fast_finish: true
   include:

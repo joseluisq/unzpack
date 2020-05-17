@@ -17,7 +17,7 @@ test:
 	@rustc -vV
 	@curl -sLo /tmp/static-web-server.zip \
 		https://github.com/joseluisq/static-web-server/archive/v1.9.0.zip
-	@cargo test
+	@cargo test --lib
 .PHONY: test
 
 fmt:
