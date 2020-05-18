@@ -1,4 +1,4 @@
-# Unzpack [![Build Status](https://travis-ci.com/joseluisq/unzpack.svg?branch=master)](https://travis-ci.com/joseluisq/unzpack) ![Crates.io](https://img.shields.io/crates/v/unzpack) [![Released API docs](https://docs.rs/unzpack/badge.svg)](https://docs.rs/unzpack)
+# Unzpack [![Build Status](https://travis-ci.com/joseluisq/unzpack.svg?branch=master)](https://travis-ci.com/joseluisq/unzpack) [![Crates.io](https://img.shields.io/crates/v/unzpack)](https://crates.io/crates/unzpack) [![Released API docs](https://docs.rs/unzpack/badge.svg)](https://docs.rs/unzpack)
 
 > A library to persist ZIP content bytes into a file and extract its content on file system.
 

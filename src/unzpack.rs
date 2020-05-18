@@ -7,9 +7,7 @@ use std::path::Path;
 /// A library to persist ZIP content bytes into a file and extract its content on file system.
 ///
 /// Unzpack is just a helper library which persists ZIP bytes content on file system, then extract its content into a specific directory path and finally deletes current ZIP file.
-/// For example, it can be useful when ZIP content is provided via [`include_bytes!`] macro.
-///
-/// [`include_bytes!`]: macro.include_bytes.html
+/// For example, it can be useful when ZIP content is provided via [`include_bytes!`](https://doc.rust-lang.org/std/macro.include_bytes.html) macro.
 pub struct Unzpack;
 
 impl Unzpack {
