@@ -178,6 +178,13 @@ mod tests {
 
         Unzpack::unpack(ZIP_BYTES, out_filepath, out_dirpath)?;
 
+        assert_eq!(out_dirpath.exists(), true);
+        assert_eq!(out_dirpath.is_dir(), true);
+
+        let out_filepath_content = out_dirpath.join("static-web-server-1.9.0");
+        assert_eq!(out_filepath_content.exists(), true);
+        assert_eq!(out_filepath_content.is_dir(), true);
+
         Ok(())
     }
 }
