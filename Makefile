@@ -16,10 +16,11 @@ test:
 	@echo "Testing library..."
 	@rustc -vV
 	@if [ ! -f "/tmp/static-web-server.zip" ]; then \
-			curl -Lo /tmp/static-web-server.zip \
-				https://github.com/joseluisq/static-web-server/archive/v1.9.0.zip; \
-			sleep 3; \
-		fi
+		echo "Downloading \"static-web-server.zip\" sample file..."; \
+		curl -sLo /tmp/static-web-server.zip \
+			https://github.com/joseluisq/static-web-server/archive/v1.9.0.zip; \
+		sleep 3; \
+	fi
 	@cargo test --lib
 .PHONY: test
 
